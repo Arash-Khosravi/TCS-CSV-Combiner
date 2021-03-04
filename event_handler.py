@@ -5,6 +5,7 @@ please check https://pypi.org/project/watchdog/ for more information
 """
 
 import time
+import pandas as pd
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from csv_folder_wrapper import directories
@@ -61,9 +62,6 @@ class Handler(FileSystemEventHandler):
             """
             # Taken any action here when a file added to the folder (created).
             data_frame_maker()
-            print(f"Received new CSV file at:\n {event.src_path}")
-            print(type(event.src_path))
-
-        elif event.event_type == 'modified':
-            # Taken any action here when a file is modified.
-            print(f"Received modified event - {event.src_path}")
+            print(f"New CSV file added to the folder:\n"
+                  f" file name is: {event.src_path.split('/')[-1]}\n"
+                  f"The Combined.csv file has been modified\n")
