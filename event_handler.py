@@ -5,7 +5,6 @@ please check https://pypi.org/project/watchdog/ for more information
 """
 
 import time
-import pandas as pd
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from csv_folder_wrapper import directories
