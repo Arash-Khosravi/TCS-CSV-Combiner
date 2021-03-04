@@ -1,5 +1,6 @@
 """
 Please execute main.py to start the app first,
+Due to type of requirements of this project, app would not have any possibility to stop or quit by user (except Ctrl+C)
 Move the files from ""Engineering Test Files" folder and add them
 You can add drag-drop csv file to the "Engineering Test Files".
 This mini app will work continuously to check the changes in CSV files folder and add the data as requested to the
